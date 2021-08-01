@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:bmi_calculator/screens/list_checker.dart';
+import 'package:Health_Checker/screens/list_checker.dart';
 
 class CalculatorBrain {
   CalculatorBrain(

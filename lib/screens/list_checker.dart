@@ -1,12 +1,12 @@
-import 'package:bmi_calculator/screens/result_checker.dart';
+import 'package:Health_Checker/screens/result_checker.dart';
 import 'package:flutter/material.dart';
-import 'package:bmi_calculator/constants.dart';
-import 'package:bmi_calculator/components/reusable_card.dart';
-import 'package:bmi_calculator/components/bottom_button.dart';
+import 'package:Health_Checker/constants.dart';
+import 'package:Health_Checker/components/reusable_card.dart';
+import 'package:Health_Checker/components/bottom_button.dart';
 import '../calculator_brain.dart';
 import '../constants.dart';
-import 'package:bmi_calculator/calculator_brain.dart';
-import 'package:bmi_calculator/components/round_icon_button.dart';
+import 'package:Health_Checker/calculator_brain.dart';
+import 'package:Health_Checker/components/round_icon_button.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'input_page.dart';
 
