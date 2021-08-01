@@ -1,29 +1,27 @@
+import 'package:bmi_calculator/screens/input_page.dart';
 import 'package:flutter/material.dart';
 import 'package:bmi_calculator/constants.dart';
 import 'package:bmi_calculator/components/reusable_card.dart';
 import 'package:bmi_calculator/components/bottom_button.dart';
-import 'list_checker.dart';
 import '../constants.dart';
 
-class ResultsPage extends StatelessWidget {
-  ResultsPage(
-      {@required this.interpretation,
-      @required this.interpretation2,
-      @required this.interpretation3,
-      @required this.bmiResult,
-      @required this.resultText});
-
-  final String bmiResult;
-  final String resultText;
-  final String interpretation;
-  final String interpretation2;
-  final String interpretation3;
-
+class ResultChecker extends StatelessWidget {
+  ResultChecker(
+      {@required this.heart,
+      @required this.respiratory,
+      @required this.hypertension,
+      @required this.immune,
+      @required this.healthrisk});
+  final String heart;
+  final String respiratory;
+  final String hypertension;
+  final String immune;
+  final String healthrisk;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Health Checker'),
+        title: Text('List Checker'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -50,32 +48,36 @@ class ResultsPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    resultText.toUpperCase(),
-                    style: kResultTextStyle,
-                  ),
-                  Text(
-                    'Because your BMI is:-',
+                    'Your risk in this scenerio is:-',
                     style: TextStyle(
                       fontSize: 30.0,
                       color: Colors.deepOrangeAccent,
                     ),
                   ),
                   Text(
-                    bmiResult,
-                    style: kBMITextStyle,
+                    '$healthrisk' + '%',
+                    style: TextStyle(
+                      fontSize: 50.0,
+                      color: Colors.blueAccent,
+                    ),
                   ),
                   Text(
-                    interpretation,
+                    '$heart',
                     textAlign: TextAlign.center,
                     style: kBodyTextStyle,
                   ),
                   Text(
-                    interpretation2,
+                    '$respiratory',
                     textAlign: TextAlign.center,
                     style: kBodyTextStyle,
                   ),
                   Text(
-                    interpretation3,
+                    '$hypertension',
+                    textAlign: TextAlign.center,
+                    style: kBodyTextStyle,
+                  ),
+                  Text(
+                    '$immune',
                     textAlign: TextAlign.center,
                     style: kBodyTextStyle,
                   ),
@@ -83,22 +85,16 @@ class ResultsPage extends StatelessWidget {
               ),
             ),
           ),
-          BottomButton(
-            buttonTitle: 'Re-Calculate',
-            onTap: () {
-              Navigator.pop(context);
-            },
-          ),
           SizedBox(
             height: 10.0,
           ),
           BottomButton(
-            buttonTitle: 'List Checker',
+            buttonTitle: 'Re-Calculate',
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => ListChecker(),
+                  builder: (context) => InputPage(),
                 ),
               );
             },

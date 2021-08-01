@@ -6,12 +6,12 @@ const kInactiveCardColour = Color(0xFF111328);
 const kBottomContainerColour = Color(0xFFEB1555);
 
 const kLabelTextStyle = TextStyle(
-  fontSize: 18.0,
+  fontSize: 20.0,
   color: Color(0xFF8D8E98),
 );
 
 const kNumberTextStyle = TextStyle(
-  fontSize: 50.0,
+  fontSize: 28.0,
   fontWeight: FontWeight.w900,
 );
 
@@ -37,5 +37,5 @@ const kBMITextStyle = TextStyle(
 );
 
 const kBodyTextStyle = TextStyle(
-  fontSize: 22.0,
+  fontSize: 20.0,
 );

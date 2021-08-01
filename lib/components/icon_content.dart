@@ -10,14 +10,14 @@ class IconContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         Icon(
           icon,
-          size: 80.0,
+          size: 65.0,
         ),
         SizedBox(
-          height: 15.0,
+          height: 16.0,
         ),
         Text(
           label,
